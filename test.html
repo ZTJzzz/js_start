@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- css样式代码 -->
+    <style>
+        body {
+            background-color: #d0e4fe;
+        }
+
+        h3 {
+            color: orange;
+            text-align: left;
+        }
+
+        /* 指定class：table-color 的样式 */
+        .table-color {
+            color: #da1647;
+        }
+    </style>
+
+</head>
+
+
+
+
+<body>
+
+
+    <h1>HTML学习
+
+</HTML>
+</h1>
+
+<hr>
+<h3>一、文本类型标签属性:</h3>
+<b>b加粗文本</b><br>
+<i>i斜体文本</i><br>
+这是<sub>sub下标</sub><sup>sup上标</sup><br>
+<del>del删除字</del><br>
+<ins>ins下划线</ins><br>
+<small>small小号字</small><br>
+
+<hr>
+<h3>二、链接类型标签属性:</h3>
+文本链接：<a href="http://www.baidu.com" style="text-decoration: none;">百度链接</a><br>
+文本链接，新窗口打开target属性：<a href="http://www.baidu.com" target="_blank">百度链接</a><br>
+图片链接：<a href="http://www.baidu.com"><img src="src/avatar.png" width="20px" height="20px"></a><br>
+
+
+<hr>
+<h3>三、图片类型标签属性:</h3>
+<img src="src/avatar.png" alt="avatar" width="50px" height="50px">
+
+
+<hr>
+<h3>四、表格类型标签属性:</h3>
+<table style="border-collapse: collapse;border:#da1647; border-style:dashed;border-width: 10px;">
+    <thead>
+        <tr>
+            <th class="table-color">列标题1</th>
+            <th>列标题2</th>
+            <th>列标题3</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td class="table-color">数据1</td>
+            <td>数据2</td>
+            <td>数据3</td>
+        </tr>
+        <tr>
+            <td class="table-color">数据1</td>
+            <td>数据2</td>
+            <td>数据3</td>
+        </tr>
+    </tbody>
+    <caption>
+        title
+    </caption>
+</table>
+
+
+<hr>
+<h3>五、列表类型标签属性:</h3>
+
+<h5>无序列表ul</h5>
+<ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+</ul>
+<h5>有序列表ol, type='1\a\A\i\I'</h5>
+<ol type="i">
+    <li>Coffee</li>
+    <li>Milk</li>
+</ol>
+
+<hr>
+<h3>六、区块元素、内联元素标签属性:</h3>
+<div>
+    区块元素，通常会以新行来开始（和结束）<br>
+    常用的区块元素有:h1 p ul table <br>
+    div没有特定含义,它独占一行，可以设置宽度、高度以及边距等样式属性。
+    它适合用于创建页面的大块结构，例如页面的主体区域、容器、布局等。
+</div>
+<br>
+<span>
+    内联元素<br>
+    常用的内联元素有:b td a img <br>
+    span没有特定含义,是行内元素，它不会独占一行，宽度默认由其内容决定。
+    它适合用于对文本或其他行内元素进行样式化、标记或包裹。
+</span>
+
+<hr>
+<h3>七、表单类型标签属性:</h3>
+<form action="/" method="post">
+    <!-- 文本输入框 -->
+    <label for="name">用户名:</label>
+    <input type="text" id="name" name="name" required>
+
+    <br>
+
+    <!-- 密码输入框 -->
+    <label for="password">密码:</label>
+    <input type="password" id="password" name="password" required>
+
+    <br>
+
+    <!-- 单选按钮 -->
+    <label>性别:</label>
+    <input type="radio" name="gender" value="male" checked>男
+    <input type="radio" name="gender" value="female"> 女
+
+    <br>
+
+    <!-- 复选框 -->
+    <input type="checkbox" id="subscribe1" name="subscribe1" checked>
+    <label for="subscribe1">订阅推送信息1</label><br>
+    <input type="checkbox" id="subscribe2" name="subscribe2">
+    <label for="subscribe2">订阅推送信息2</label><br>
+    <input type="checkbox" id="subscribe3" name="subscribe3" checked>
+    <label for="subscribe3">订阅推送信息3</label>
+
+    <br>
+
+    <!-- 下拉列表 -->
+    <label for="country">国家:</label>
+    <select id="country" name="country">
+        <option value="cn">CN</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+    </select>
+
+    <br>
+
+    <!-- 提交按钮 -->
+    <input type="submit" value="提交">
+</form>
+
+
+
+<p id="demo">JavaScript 可以触发事件，就像按钮点击。</p>
+
+<script>
+    function myFunction() {
+
+        // 找到元素
+        x = document.getElementById("demo")
+
+        // 修改内容
+        x.innerHTML = "Hello JavaScript!";
+
+        // 修改样式
+        x.style.color = '#FF0000'
+        
+        alert("123")
+    }
+</script>
+
+<button type="button" onclick="myFunction()">点我</button>
+
+
+</body>
+
+</html>

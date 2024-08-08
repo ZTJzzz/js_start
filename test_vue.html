@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue基础学习</title>
+    <script src="https://cdn.staticfile.net/vue/3.2.36/vue.global.min.js"></script>
+
+</head>
+
+
+<body>
+    <!-- 代码执行过程
+
+    1、页面加载时，浏览器解析 HTML 和 JavaScript。
+    2、Vue.js 脚本执行时，创建了一个 Vue 应用实例，并将其绑定到 <div id="hello-vue-app"> 元素上。
+    3、Vue 应用实例根据 data() 中的初始数据，将 message 的值渲染到页面上的 {{ message }} 处。
+    4、当 message 数据发生变化时（例如通过用户交互或异步操作），页面会自动更新以反映这些变化。
+    
+    -->
+    <div id="hellp-vue-app">
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+        <button v-on:click="greet">Greet</button>
+    </div>
+
+    <script>
+
+        const HelloVueApp = {
+            data() {
+                return {
+                    message: 'Hello Vue!!'
+                }
+            },
+            methods: {
+                greet() {
+                    alert('Hello!');
+
+                    
+                }
+            }
+        }
+        Vue.createApp(HelloVueApp).mount('#hellp-vue-app')
+    </script>
+</body>
+
+</html>
